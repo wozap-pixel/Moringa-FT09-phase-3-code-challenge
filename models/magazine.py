@@ -4,9 +4,13 @@ class Magazine:
         self._name = name
         self._category = category
 
-    # String representation for better debugging
+    # String representation for debugging (useful for logging or debugging)
     def __repr__(self):
         return f'<Magazine {self.name}>'
+
+    # User-friendly string representation
+    def __str__(self):
+        return f"Magazine: {self.name} (Category: {self.category})"
 
     # Getter for id
     @property
@@ -25,7 +29,6 @@ class Magazine:
         if len(value) < 2 or len(value) > 16:
             raise ValueError("Name must be between 2 and 16 characters.")
         self._name = value
-        # Update the database here if necessary
 
     # Getter and setter for category
     @property
@@ -39,4 +42,3 @@ class Magazine:
         if len(value) == 0:
             raise ValueError("Category cannot be empty.")
         self._category = value
-        # Update the database here if necessary

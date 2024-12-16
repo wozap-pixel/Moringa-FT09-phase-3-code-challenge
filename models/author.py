@@ -9,9 +9,13 @@ class Author:
         if len(self._name) == 0:
             raise ValueError("Name must be longer than 0 characters.")
 
-    # String representation for better debugging
+    # String representation for debugging (useful for logging or debugging)
     def __repr__(self):
         return f'<Author {self.name}>'
+
+    # User-friendly string representation
+    def __str__(self):
+        return f"Author: {self.name}"
 
     # Getter for id
     @property

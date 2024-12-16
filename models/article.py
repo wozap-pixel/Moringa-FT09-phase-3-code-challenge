@@ -17,9 +17,13 @@ class Article:
         if len(self._content) == 0:
             raise ValueError("Content cannot be empty.")
 
-    # String representation for better debugging
+    # String representation for debugging
     def __repr__(self):
         return f'<Article {self.title}>'
+
+    # User-friendly string representation
+    def __str__(self):
+        return f"Article: {self.title} (Author ID: {self.author_id}, Magazine ID: {self.magazine_id})"
 
     # Getter for id
     @property
